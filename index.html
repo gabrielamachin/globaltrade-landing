@@ -1,76 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GlobalTrade | International Business Consulting</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <header>
-        <nav class="navbar">
-            <div class="logo">Global<span>Trade</span></div>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">Who We Are</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#contact">Contact Us</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h1>Global Expansion Experts</h1>
-            <p>We streamline your import and export operations with strategic insights.</p>
-            <a href="#contact" class="btn-primary">Get a Free Audit</a>
-        </div>
-    </section>
-
-    <section id="about" class="container">
-        <div class="section-title">
-            <h2>Who We Are</h2>
-            <div class="underline"></div>
-        </div>
-        <div class="about-grid">
-            <div class="about-card">
-                <h3>Our Mission</h3>
-                <p>To simplify global trade for businesses of all sizes by providing expert customs brokerage, optimized logistics, and strategic compliance advisory.</p>
-            </div>
-            <div class="about-card">
-                <h3>Our Vision</h3>
-                <p>To be the premier global gateway for international commerce, recognized for our technological innovation and unwavering commitment to seamless supply chains.</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="services" class="bg-light">
-        <div class="container">
-            <div class="section-title"><h2>Our Services</h2><div class="underline"></div></div>
-            <div class="services-grid">
-                <div class="card"><h3>Customs Management</h3><p>Expert handling of import/export documentation and tariff classifications.</p></div>
-                <div class="card"><h3>Global Logistics</h3><p>End-to-end supply chain optimization and freight forwarding services.</p></div>
-                <div class="card"><h3>Trade Compliance</h3><p>Legal advisory on international regulations and trade agreements.</p></div>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact" class="container">
-        <div class="contact-wrapper">
-            <h2>Contact & Cost Estimator</h2>
-            <form id="comex-form">
-                <input type="text" id="company" placeholder="Company Name" required>
-                <select id="operation-type">
-                    <option value="import">Import (12% tax est.)</option>
-                    <option value="export">Export (4% tax est.)</option>
-                </select>
-                <input type="number" id="fob-value" placeholder="Estimated FOB Value (USD)" required>
-                <button type="submit" class="btn-submit">Calculate & Send Inquiry</button>
-            </form>
-            <div id="result-display" style="display:none;"></div>
-        </div>
-    </section>
-
-    <script src="dist/script.js"></script>
-</body>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
 </html>
