@@ -1,0 +1,25 @@
+{
+  "name": "globaltrade-landing",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gabrielamachin/globaltrade-landing.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/gabrielamachin/globaltrade-landing/issues"
+  },
+  "homepage": "https://github.com/gabrielamachin/globaltrade-landing#readme",
+  "devDependencies": {
+    "typescript": "^5.9.3"
+  }
+}
