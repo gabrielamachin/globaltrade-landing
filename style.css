@@ -20,8 +20,17 @@ nav { display: flex; justify-content: space-between; align-items: center; }
 .nav-links li a { color: white; text-decoration: none; margin-left: 20px; font-size: 0.9rem; }
 
 .hero {
-height: 70vh; background: linear-gradient(rgba(0,51,102,0.7), rgba(0,51,102,0.7)), url('[https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=1200&q=80](https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=1200&q=80)');
-background-size: cover; display: flex; flex-direction: column; align-items: center; justify-content: center; color: white; text-align: center; margin-top: 50px;
+height: 70vh;
+background: linear-gradient(rgba(0,51,102,0.7), rgba(0,51,102,0.7)), url('images/container.avif');
+background-size: cover;
+background-position: center;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+color: white;
+text-align: center;
+margin-top: 50px;
 }
 
 .btn-primary { background: var(--accent-orange); color: white; padding: 12px 25px; text-decoration: none; border-radius: 4px; font-weight: bold; margin-top: 30px; display: inline-block; }
