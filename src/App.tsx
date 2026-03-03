@@ -3,7 +3,7 @@ import { Hero } from './components/Hero';
 import { About } from './components/About';
 import { Services } from './components/Services';
 import { Contact } from './components/Contact';
-import '../style.css';
+import './styles/style.css';
 
 function App() {
   return (
