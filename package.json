@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "tsc",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -14,12 +16,21 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs",
+  "type": "module",
   "bugs": {
     "url": "https://github.com/gabrielamachin/globaltrade-landing/issues"
   },
   "homepage": "https://github.com/gabrielamachin/globaltrade-landing#readme",
   "devDependencies": {
-    "typescript": "^5.9.3"
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^5.1.4",
+    "typescript": "^5.9.3",
+    "vite": "^7.3.1"
+  },
+  "dependencies": {
+    "lucide-react": "^0.576.0",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4"
   }
 }
