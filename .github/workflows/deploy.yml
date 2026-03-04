@@ -22,16 +22,16 @@ jobs:
           node-version: '18'
 
       - name: Install dependencies
-        # Agregamos 'working-directory' para que sepa dónde está el proyecto
+        # Run npm install in repository root
         run: npm install
-        working-directory: ./globaltrade-react
+        working-directory: ./
 
       - name: Build project
         run: npm run build
-        working-directory: ./globaltrade-react
+        working-directory: ./
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./globaltrade-react/dist
+          publish_dir: ./dist
