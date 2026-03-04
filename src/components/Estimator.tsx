@@ -22,7 +22,6 @@ export const Estimator = () => {
 
   const [result, setResult] = useState<EstimationResult | null>(null);
 
-  // Logic integrated directly in the component
   const calculateTax = (value: number, type: 'import' | 'export'): number => {
     const taxRate = type === 'import' ? 0.12 : 0.04;
     return value * taxRate;
@@ -34,7 +33,9 @@ export const Estimator = () => {
     setFormData((prev) => ({
       ...prev,
       [id === 'operation-type' ? 'type' : id === 'company' ? 'company' : 'value']:
-        id === 'fob-value' ? (value === '' ? 0 : parseFloat(value)) : value,
+        id === 'fob-value' 
+          ? (value === '' ? 0 : parseFloat(value)) 
+          : value,
     }));
   };
 
@@ -82,11 +83,7 @@ export const Estimator = () => {
           <label htmlFor="operation-type" className="text-xs font-bold uppercase text-gray-500 mb-1 block">
             Operation Type
           </label>
-          <select
-            id="operation-type"
-            value={formData.type}
-            onChange={handleInputChange}
-          >
+          <select id="operation-type" value={formData.type} onChange={handleInputChange}>
             <option value="import">Import (12% tax est.)</option>
             <option value="export">Export (4% tax est.)</option>
           </select>
@@ -102,6 +99,7 @@ export const Estimator = () => {
             placeholder="0.00"
             min="0"
             step="0.01"
+            /* Cambiamos esto para que el campo no se bloquee con el 0 inicial */
             value={formData.value === 0 ? '' : formData.value}
             onChange={handleInputChange}
             required
@@ -122,7 +120,7 @@ export const Estimator = () => {
           <h4 className="font-bold border-b border-gray-100 pb-2 mb-2 text-[#003366]">Estimation Summary</h4>
           <p><strong>Client:</strong> {result.company}</p>
           <p><strong>Service:</strong> {result.type}</p>
-          <p className="text-sm text-gray-500 mt-1">Total Operation (FOB + Tax): ${result.total.toLocaleString(undefined, { minimumFractionDigits: 2 })}</p>
+          <p className="text-sm text-gray-500 mt-1">Total (FOB + Tax): ${result.total.toLocaleString(undefined, { minimumFractionDigits: 2 })}</p>
           <p className="text-lg mt-2 font-bold text-[#FF8C00]">
             Estimated Tax: ${result.tax.toLocaleString(undefined, { minimumFractionDigits: 2 })} USD
           </p>

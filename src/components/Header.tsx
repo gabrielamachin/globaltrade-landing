@@ -22,19 +22,17 @@ const Header: React.FC = () => {
     { name: 'Home', href: '#home' },
     { name: 'Who We Are', href: '#about' },
     { name: 'Services', href: '#services' },
-    { name: 'Estimator', href: '#contact' },
+    { name: 'Estimator', href: '#estimator' },
   ];
 
   return (
     <header className={isScrolled ? 'header-active' : 'header-transparent'}>
       <div className="header-container">
-        {/* Logo */}
         <div className="logo">
           <Globe className="icon-orange" size={28} />
           <span>Global<span className="text-orange">Trade</span></span>
         </div>
 
-        {/* Desktop Navigation */}
         <nav className="nav-desktop">
           <ul className="nav-list">
             {navLinks.map((link) => (
@@ -44,10 +42,15 @@ const Header: React.FC = () => {
                 </a>
               </li>
             ))}
+            {/* Botón Contact Us con la misma clase que los demás */}
+            <li>
+              <a href="#footer" className="nav-link">
+                Contact Us
+              </a>
+            </li>
           </ul>
         </nav>
 
-        {/* Mobile Toggle */}
         <button 
           className="mobile-toggle"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -56,7 +59,6 @@ const Header: React.FC = () => {
         </button>
       </div>
 
-      {/* Mobile Menu */}
       {isMobileMenuOpen && (
         <nav className="nav-mobile">
           <ul>
@@ -70,6 +72,14 @@ const Header: React.FC = () => {
                 </a>
               </li>
             ))}
+            <li>
+              <a 
+                href="#footer" 
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Contact Us
+              </a>
+            </li>
           </ul>
         </nav>
       )}
