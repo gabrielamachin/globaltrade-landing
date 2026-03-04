@@ -2,7 +2,6 @@ import { Linkedin, Twitter, Instagram } from 'lucide-react';
 
 const Footer = () => {
   return (
-    /* Paso 1: Agregamos id="footer" para permitir el scroll desde el Header */
     <footer id="footer" className="bg-[#003366] text-white py-12 px-[10%] border-t border-white/10">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         <div>
@@ -14,7 +13,6 @@ const Footer = () => {
           <ul className="space-y-2 text-gray-400 text-sm">
             <li><a href="#home" className="hover:text-orange-500 transition-colors">Home</a></li>
             <li><a href="#services" className="hover:text-orange-500 transition-colors">Services</a></li>
-            {/* Paso 2: Actualizamos el href a #estimator para que coincida con la nueva lógica */}
             <li><a href="#estimator" className="hover:text-orange-500 transition-colors">Estimator</a></li>
           </ul>
         </div>
