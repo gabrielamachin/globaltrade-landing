@@ -33,14 +33,14 @@ const NewsCarousel = () => {
   }, []);
 
   return (
-  <section className="news-section"> {/* Usamos la clase de tu CSS */}
+  <section className="news-section">
     <div className="container">
       <div className="flex items-center gap-2 mb-8 justify-center">
         <Newspaper className="text-[#FF8C00]" size={24} />
         <h2 className="section-title" style={{marginBottom: 0}}>Global News Feed</h2>
       </div>
 
-      <div className="news-card"> {/* Usamos la clase de tu CSS */}
+      <div className="news-card">
         <div className="flex flex-col items-center text-center">
           <span style={{color: 'var(--accent-orange)', fontWeight: 'bold', fontSize: '0.8rem'}}>
               {newsItems[currentIndex]?.category}
