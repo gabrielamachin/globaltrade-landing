@@ -19,10 +19,10 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '18'
+          # Actualizado de '18' a '20' para compatibilidad con Vite v7
+          node-version: '20' 
 
       - name: Install dependencies
-        # Run npm install in repository root
         run: npm install
         working-directory: ./
 
@@ -31,7 +31,8 @@ jobs:
         working-directory: ./
 
       - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
+        # Actualizado a v4 para mejor soporte
+        uses: peaceiris/actions-gh-pages@v4 
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
