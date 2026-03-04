@@ -33,7 +33,9 @@ export const Contact = () => {
     setFormData((prev) => ({
       ...prev,
       [id === 'operation-type' ? 'type' : id === 'company' ? 'company' : 'value']:
-        id === 'fob-value' ? Math.max(0, parseFloat(value) || 0) : value,
+        id === 'fob-value' 
+          ? (value === '' ? 0 : parseFloat(value)) 
+          : value,
     }));
   };
 
@@ -107,7 +109,8 @@ export const Contact = () => {
               placeholder="0.00"
               min="0"
               step="0.01"
-              value={formData.value || ''}
+              /* Si el valor es 0, mostramos string vacío para que el campo sea editable */
+              value={formData.value === 0 ? '' : formData.value}
               onChange={handleInputChange}
               required
             />
