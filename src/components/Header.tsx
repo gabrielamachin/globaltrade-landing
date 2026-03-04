@@ -20,7 +20,7 @@ const Header: React.FC = () => {
 
   const navLinks: NavLink[] = [
     { name: 'Home', href: '#home' },
-    { name: 'Who We Are', href: '#about' },
+    { name: 'About Us', href: '#about' },
     { name: 'Services', href: '#services' },
     { name: 'Estimator', href: '#estimator' },
   ];
@@ -42,10 +42,9 @@ const Header: React.FC = () => {
                 </a>
               </li>
             ))}
-            {/* Botón Contact Us con la misma clase que los demás */}
             <li>
               <a href="#footer" className="nav-link">
-                Contact Us
+                Contact
               </a>
             </li>
           </ul>

@@ -2,7 +2,7 @@ export const About = () => {
   return (
     <section id="about" className="container">
       <div className="section-title">
-        <h2>Who We Are</h2>
+        <h2>About Us</h2>
         <div className="underline"></div>
       </div>
       <div className="about-grid">

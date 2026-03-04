@@ -99,7 +99,6 @@ export const Estimator = () => {
             placeholder="0.00"
             min="0"
             step="0.01"
-            /* Cambiamos esto para que el campo no se bloquee con el 0 inicial */
             value={formData.value === 0 ? '' : formData.value}
             onChange={handleInputChange}
             required
