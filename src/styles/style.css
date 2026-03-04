@@ -15,7 +15,7 @@
 }
 
 body {
-    padding-top: 0; /* Permite que el Hero se posicione detrás del Header transparente */
+    padding-top: 0; 
 }
 
 h1, h2, h3 {
@@ -29,7 +29,6 @@ h1, h2, h3 {
     padding: 80px 10%;
 }
 
-/* Centrado global para títulos de sección */
 .section-title, 
 #about h2, 
 #services h2,
@@ -62,15 +61,95 @@ header {
     transition: all 0.3s ease-in-out;
 }
 
-/* Limpieza de estilos de lista para navegación */
-header ul, .nav-links {
-    list-style: none !important;
-    padding: 0;
-    margin: 0;
+.header-transparent {
+    background-color: transparent;
+    padding: 25px 0;
 }
 
-header a {
-    text-decoration: none !important;
+.header-active {
+    background-color: var(--primary-blue);
+    padding: 15px 0;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: white;
+    font-size: 1.6rem;
+    font-weight: 800;
+}
+
+.icon-orange, .text-orange {
+    color: var(--accent-orange);
+}
+
+.nav-desktop {
+    display: block;
+}
+
+.nav-list {
+    display: flex;
+    gap: 35px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+.nav-link:hover {
+    color: var(--accent-orange);
+}
+
+.mobile-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.nav-mobile {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: var(--primary-blue);
+    padding: 30px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.nav-mobile ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    list-style: none;
+}
+
+.nav-mobile a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 700;
 }
 
 /* --- HERO SECTION --- */
@@ -96,6 +175,17 @@ header a {
     -webkit-text-fill-color: transparent;
     font-size: 3.5rem;
     margin-bottom: 15px;
+}
+
+.hero p {
+    margin-bottom: 35px;
+    font-size: 1.2rem;
+    max-width: 700px;
+    line-height: 1.6;
+}
+
+.hero .btn-primary {
+    margin-top: 5px;
 }
 
 /* --- CARDS & SERVICES --- */
@@ -124,7 +214,7 @@ header a {
 /* --- NEWS FEED --- */
 .news-section {
     background-color: var(--light-gray);
-    padding: 80px 10%;
+    padding: 60px 10% 40px; /* Reducido para evitar huecos */
     text-align: center;
 }
 
@@ -138,10 +228,10 @@ header a {
     border-bottom: 4px solid var(--accent-orange);
 }
 
-/* --- TRADE COST ESTIMATOR (CONTACT) --- */
+/* --- TRADE COST ESTIMATOR --- */
 #contact {
     background-color: var(--light-gray);
-    padding: 80px 10%;
+    padding: 40px 10% 80px; /* Reducido arriba para acercarlo a noticias */
 }
 
 .contact-wrapper {
@@ -153,7 +243,6 @@ header a {
     border-radius: 12px;
 }
 
-/* Estilos para formularios dentro del Estimador */
 .form-group input, 
 .form-group select {
     width: 100%;
@@ -210,4 +299,20 @@ footer a:hover {
 
 section {
     scroll-margin-top: 80px; 
+}
+
+/* --- RESPONSIVE BREAKPOINT --- */
+@media (max-width: 768px) {
+    .nav-desktop {
+        display: none;
+    }
+    .mobile-toggle {
+        display: block;
+    }
+    .header-container {
+        padding: 0 20px;
+    }
+    .hero h1 {
+        font-size: 2.5rem;
+    }
 }
